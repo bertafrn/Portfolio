@@ -20,10 +20,35 @@
 ---
 
 ### 1. What is the total amount each customer spent at the restaurant?
+```sql
+SELECT s.customer_id, SUM(m.price) AS total_spent
+FROM sales s
+JOIN menu m ON s.product_id = m.product_id
+GROUP BY s.customer_id
+ORDER BY total_spent DESC;
+```
+### Result:
+| customer_id | total_spent |
+| --- | --- |
+| A	| 76 |
+| B	| 74 |
+| C	| 36 |
 
 ### 2. How many days has each customer visited the restaurant?
+```sql
+SELECT customer_id, COUNT(DISTINCT order_date) AS visit_days
+FROM sales
+GROUP BY customer_id;
+```
+### Result:
+| customer_id | visit_days |
+| --- | --- |
+| A	| 4 |
+| B	| 6 |
+| C	| 2 |
 
 ### 3. What was the first item from the menu purchased by each customer?
+
 
 ### 4. What is the most purchased item on the menu and how many times was it purchased by all customers?
 
