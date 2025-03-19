@@ -48,9 +48,28 @@ GROUP BY customer_id;
 | C	| 2 |
 
 ### 3. What was the first item from the menu purchased by each customer?
-
+```sql
+WITH first_item_purchase AS (
+SELECT s.customer_id, s.order_date, s.product_id,
+	RANK() OVER(PARTITION BY s.customer_id ORDER BY s.order_date) AS rank_menu
+FROM sales s
+)
+SELECT f.customer_id, m.product_name
+FROM first_item_purchase f
+JOIN menu m ON f.product_id = m.product_id
+WHERE rank_menu=1;
+```
+### Result:
+| customer_id | product_name |
+| --- | --- |
+| A	| sushi |
+| A	| curry |
+| B	| curry |
+| C	| ramen |
+| C	| ramen |
 
 ### 4. What is the most purchased item on the menu and how many times was it purchased by all customers?
+
 
 ### 5. Which item was the most popular for each customer?
 
