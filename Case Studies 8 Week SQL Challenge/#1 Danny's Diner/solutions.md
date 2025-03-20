@@ -176,6 +176,7 @@ GROUP BY s.customer_id;
 ```
 ### Result:
 | customer_id | total_points |
+| --- | --- |
 | A | 860 |
 | B | 940 |
 | C | 360 |
