@@ -125,9 +125,59 @@ WHERE rnk = 1;
 | A | curry |
 
 ### 7. Which item was purchased just before the customer became a member?
+```sql
+WITH purchase_before_membership AS (
+SELECT s.customer_id, s.order_date, s.product_id,
+	DENSE_RANK() OVER(PARTITION BY s.customer_id ORDER BY s.order_date DESC) AS rnk
+    FROM sales s
+    JOIN members m ON s.customer_id = m.customer_id
+    WHERE s.order_date < m.join_date
+)
+SELECT p.customer_id, m.product_name
+FROM purchase_before_membership p
+JOIN menu m ON p.product_id = m.product_id 
+WHERE rnk = 1
+ORDER BY customer_id;
+```
+### Result:
+| customer_id | product_name |
+| --- | --- |
+| A | sushi |
+| A | curry |
+| B | sushi |
 
 ### 8. What is the total items and amount spent for each member before they became a member?
+```sql
+SELECT s.customer_id, COUNT(s.product_id) AS total_item, SUM(m.price) AS total_spent
+FROM sales s
+JOIN menu m ON s.product_id = m.product_id
+JOIN members mem ON s.customer_id = mem.customer_id
+WHERE s.order_date < mem.join_date
+GROUP BY customer_id
+ORDER BY customer_id;
+```
+### Result:
+| customer_id | total_item | total_spent|
+| --- | --- | --- |
+| A | 2 | 25 |
+| B | 3 | 40 |
 
 ### 9. If each $1 spent equates to 10 points and sushi has a 2x points multiplier - how many points would each customer have?
+```sql
+SELECT s.customer_id,
+		SUM(
+			CASE
+            WHEN m.product_name = 'sushi' THEN m.price * 20
+            ELSE m.price * 10
+		END) AS total_points
+FROM sales s
+JOIN menu m ON s.product_id = m.product_id
+GROUP BY s.customer_id;
+```
+### Result:
+| customer_id	total_points
+| A | 860 |
+| B | 940 |
+| C | 360 |
 
 ### 10. In the first week after a customer joins the program (including their join date) they earn 2x points on all items,           not just sushi - how many points do customer A and B have at the end of January?
