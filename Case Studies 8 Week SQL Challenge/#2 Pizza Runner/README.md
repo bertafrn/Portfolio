@@ -25,7 +25,7 @@ The key datasets in this case study include:
 - `pizza_toppings`: Contains a list of all available toppings along with their respective IDs.
 
 ## Entity Relationship Diagram
-![Image]()
+![Image](https://github.com/bertafrn/Portfolio/blob/main/Case%20Studies%208%20Week%20SQL%20Challenge/assets/ERD%20Pizza%20Runnerr.jpg?raw=true)
 
 ## Case Study Solutions
 - [0. Data Cleaning](Data-Cleaning.md)
