@@ -22,3 +22,8 @@ Danny, the CEO of this trendy fashion company has asked you to assist the teamâ€
 ## Entity Relationship Diagram
 
 ## Case Study Solutions
+- [1. High Level Sales Analysis](1.%20High-Level-Sales-Analysis.md)
+- [2. Transaction Analysis](2.%20Transaction-Analysis.md)
+- [3. Product Analysis](3.%20Product-Analysis.md)
+- [4. Reporting Challenge](4.%20Reporting-Challenge.md)
+- [5. Bonus Challenge](5.%20Bonus-Challenge.md)
