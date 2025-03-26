@@ -20,7 +20,7 @@ Danny wants to analyze customer data to understand their visit patterns, spendin
 ## Datasets Used
 This case study involves three main datasets:
 - `sales`: Records each purchase made by customers, including the `customer_id`, `order_date`, and `product_id`, which indicates what menu items were ordered and when.
-- `menu`: Links each `product_id` to its corresponding `product_name` and price, providing details about the menu items.
+- `menu`: Links each `product_id` to its corresponding `product_name` and `price`, providing details about the menu items.
 - `members`: Tracks when a `customer_id` joined the beta version of Danny’s Diner loyalty program through the `join_date` field.
 
 ## Entity Relationship Diagram
