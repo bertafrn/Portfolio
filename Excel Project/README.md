@@ -1,3 +1,5 @@
+![Image](https://github.com/bertafrn/Portfolio/blob/main/Excel%20Project/Assets/Excel%20Dashboard.jpeg?raw=true)
+
 ## Overview
 This project analyzes sales data using Excel functionalities such as Pivot Tables, Dashboards, and What-If Analysis. The dataset consists of order details, product information, and customer data.
 
