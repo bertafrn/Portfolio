@@ -165,10 +165,9 @@ ORDER BY customer_id;
 ### 9. If each $1 spent equates to 10 points and sushi has a 2x points multiplier - how many points would each customer have?
 ```sql
 SELECT s.customer_id,
-		SUM(
-			CASE
-            WHEN m.product_name = 'sushi' THEN m.price * 20
-            ELSE m.price * 10
+		SUM(CASE
+            	WHEN m.product_name = 'sushi' THEN m.price * 20
+            	ELSE m.price * 10
 		END) AS total_points
 FROM sales s
 JOIN menu m ON s.product_id = m.product_id
@@ -182,3 +181,80 @@ GROUP BY s.customer_id;
 | C | 360 |
 
 ### 10. In the first week after a customer joins the program (including their join date) they earn 2x points on all items,           not just sushi - how many points do customer A and B have at the end of January?
+```sql
+WITH total_points AS (
+    SELECT 
+        m.customer_id, 
+        m.join_date, 
+        DATE_ADD(m.join_date, INTERVAL 6 DAY) AS program_last_date
+    FROM members m
+)
+SELECT 
+    s.customer_id,
+    SUM(
+        CASE 
+            WHEN s.order_date BETWEEN t.join_date AND t.program_last_date 
+                THEN men.price * 10 * 2 
+            ELSE men.price * 10 
+        END
+    ) AS customer_points
+FROM sales s
+JOIN menu men ON s.product_id = men.product_id
+JOIN total_points t ON s.customer_id = t.customer_id
+WHERE s.order_date <= '2021-01-31'
+GROUP BY s.customer_id;
+```
+### Result:
+| customer_id | customer_points |
+| --- | --- |
+| B |	720 |
+| A |	1270 |
+
+---
+**Bonus Questions** :
+1. Join all the things
+```sql
+SELECT 
+    s.customer_id,
+    s.order_date,
+    m.product_name,
+    m.price,
+    mem.join_date
+FROM sales s
+JOIN menu m ON s.product_id = m.product_id
+JOIN members mem ON s.customer_id = mem.customer_id
+ORDER BY s.customer_id, s.order_date;
+```
+### Result:
+| customer_id | order_date | product_name | price |
+| --- | --- | --- | --- | 
+| A |	2021-01-01 |	sushi |	10 |	2021-01-07 |
+| A |	2021-01-01 |	curry |	15 |	2021-01-07 |
+| A |	2021-01-07 |	curry |	15 |	2021-01-07 |
+| A |	2021-01-10 |	ramen |	12 |	2021-01-07 |
+| A |	2021-01-11 |	ramen |	12 |	2021-01-07 |
+| A |	2021-01-11 |	ramen |	12 |	2021-01-07 |
+| B |	2021-01-01 |	curry |	15 |	2021-01-09 |
+| B |	2021-01-02 |	curry |	15 |	2021-01-09 |
+| B |	2021-01-04 |	sushi |	10 |	2021-01-09 |
+| B |	2021-01-11 |	sushi |	10 |	2021-01-09 |
+| B |	2021-01-16 |	ramen |	12 |	2021-01-09 |
+| B |	2021-02-01 |	ramen |	12 |	2021-01-09 |
+
+3. Rank all the things
+```sql
+SELECT s.customer_id,
+		SUM(m.price) AS total_spent,
+        RANK() OVER(ORDER BY SUM(m.price) DESC) AS ranking
+FROM sales s
+JOIN menu m ON s.product_id = m.product_id
+GROUP BY customer_id
+ORDER BY ranking;
+```
+### Result:
+| customer_id | total_spent | ranking |
+| --- | --- | --- |
+| A |	76 |	1 |
+| B |	74 |	2 |
+| C |	36 |	3 |
+
