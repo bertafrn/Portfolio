@@ -32,6 +32,4 @@ The key datasets in this case study include:
 - [1. Pizza Metrics](1.%20Pizza-Metrics.md)
 - [2. Runner and Customer Experience](2.%20Runner-and-Customer-Experience.md)
 - [3. Ingredient Optimisation](3.%20Ingredient-Optimisation.md)
-- [4. Pricing and Ratings](4.%20Pricing-and-Ratings.md)
-- [5. Bonus DML Challenges](5.%20Bonus-DML-Challenges.md)
 
