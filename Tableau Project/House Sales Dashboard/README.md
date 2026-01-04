@@ -10,6 +10,7 @@
 The House Sales Dashboard is a Tableau data visualization project designed to analyze housing price trends based on various factors such as transaction date, house condition, size, and location. This dashboard presents data through charts, maps, and tables to help users understand pricing patterns and the factors influencing house sales.
 
 ### Data Source
+Kaggle
 
 ### Dashboard Components
 1. `Filter Panel`: Select month, year built, living space, and lot size
