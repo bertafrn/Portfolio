@@ -6,11 +6,9 @@
         Visualization: Sales Analysis (Area Chart)
         Total sales increase from the beginning of the year, peak around mid-year (June–August), and decline toward the end   of the year.
 
-2. Which channels bring in the most sales?
-   
-Visualization: Sales by Channels (Bar Chart)
-
-The Website channel generates the highest sales, followed by Direct Sales and Resellers.
+#### 2. Which channels bring in the most sales?
+        Visualization: Sales by Channels (Bar Chart)
+        The Website channel generates the highest sales, followed by Direct Sales and Resellers.
 
 3. Do annual plans bring higher revenue per customer than monthly plans?
    
