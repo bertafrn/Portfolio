@@ -2,10 +2,8 @@
 ![Image](https://github.com/bertafrn/Portfolio/blob/4b5e97b2a507bbc5334a3a6cebc4d1f099e3d1fa/Power%20BI%20Project/Assets/DataDNA%20%E2%80%93%20E%E2%80%91commerce%20Analytics_page-0001.jpg)
 
 ### Questions
-1. How do total sales change by month?
-   
+#### 1. How do total sales change by month?  
 Visualization: Sales Analysis (Area Chart)
-
 Total sales increase from the beginning of the year, peak around mid-year (June–August), and decline toward the end of the year.
 
 2. Which channels bring in the most sales?
