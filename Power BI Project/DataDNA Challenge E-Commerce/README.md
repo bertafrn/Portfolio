@@ -10,8 +10,8 @@
 
 ### Table of Contents
 - [Introduction](#Introduction).
-- [Data Source](#Data Source).
-- [Questions](#Questions).
+- [Data Source](#Data-Source).
+- [Questions](#Questions)
 
 ### Introduction
 The E-commerce Analytics Challenge is a data analysis project focused on examining sales performance from a global software retailer offering subscription-based products and add-ons in analytics, design, collaboration, and AI. This project aims to identify loyal customers through repeat purchase behavior and analyze the impact of sales channels and promotional campaigns on customer retention. The analysis is presented through dashboards and analytical insights to help understand purchasing patterns and key drivers of repeat sales.
