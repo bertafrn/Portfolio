@@ -1,5 +1,5 @@
 ## DataDNA Challenge E-Commerce Analytics
-![Image](Power BI Project/Assets/DataDNA – E‑commerce Analytics_page-0001.jpg)
+![Image](https://github.com/bertafrn/Portfolio/blob/4b5e97b2a507bbc5334a3a6cebc4d1f099e3d1fa/Power%20BI%20Project/Assets/DataDNA%20%E2%80%93%20E%E2%80%91commerce%20Analytics_page-0001.jpg)
 
 ### Table of Contents
 - [Introduction](#Introduction).
