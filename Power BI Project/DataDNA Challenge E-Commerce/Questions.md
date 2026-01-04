@@ -3,18 +3,21 @@
 
 ### Questions
 1. How do total sales change by month?
+   
 Visualization: Sales Analysis (Area Chart)
 Total sales increase from the beginning of the year, peak around mid-year (June–August), and decline toward the end of the year.
 
-2. Which channels bring in the most sales?
+3. Which channels bring in the most sales?
+   
 Visualization: Sales by Channels (Bar Chart)
 The Website channel generates the highest sales, followed by Direct Sales and Resellers.
 
-3. Do annual plans bring higher revenue per customer than monthly plans?
+5. Do annual plans bring higher revenue per customer than monthly plans?
+   
 Visualization: Billing Cycle Revenue (Donut Chart)
 Annual plans contribute the largest share of revenue compared to monthly and one-time purchases, indicating higher revenue per customer.
 
-4. Where do refunds happen most (by product)?
+7. Where do refunds happen most (by product)?
 Visualization: Refunded by Products (Bar Chart)
 Refunds occur most frequently in monthly subscription products, particularly AI and collaboration-related tools.
 
