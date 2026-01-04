@@ -3,8 +3,8 @@
 
 ### Questions
 #### 1. How do total sales change by month?  
-Visualization: Sales Analysis (Area Chart)
-Total sales increase from the beginning of the year, peak around mid-year (June–August), and decline toward the end of the year.
+        Visualization: Sales Analysis (Area Chart)
+        Total sales increase from the beginning of the year, peak around mid-year (June–August), and decline toward the end   of the year.
 
 2. Which channels bring in the most sales?
    
