@@ -26,10 +26,10 @@ Analytical dashboard for Zephyr Bank's H1 2026 transaction health review, coveri
 - Power Query — data type cleaning
 
 ## 📂 Repository Structure
-- [SQL](sql_file.md)
-- [Power BI Dashboard](Dashboard_file.md)
-- [Challenge](DataDNA_Challenge.md)
-- [Data](data.md)
+- [SQL](Zephyr Bank.sql)
+- [Power BI Dashboard](DataDNA Dataset Challenge - 2026-06 - UK Fintech Neobank Digital Transaction Health Monitor.pbix)
+- [Challenge](CHALLENGE_BRIEF.md)
+- [Link Challenge](https://datadna.onyxdata.co.uk/challenges/june-2026-datadna-uk-fintech-neobank-digital-transaction-health-monitor-analytics-challenge/))
 
 ## 🔄 Workflow
 
@@ -39,7 +39,7 @@ Raw CSVs were loaded into MySQL, then transformed:
 - Built a master view `vw_transactions_full` joining fact table with all 3 dimension tables (customer, transaction_type, merchant_category)
 - Added derived columns: `tenure_months`, `tenure_band` (customer account age categorization)
 
-See [SQL](sql_file.sql) for full script.
+See [SQL](Zephyr Bank.sql) for full script.
 
 ### 2. Power BI Connection
 - Connected Power BI Desktop to MySQL via **Get Data → ODBC**
