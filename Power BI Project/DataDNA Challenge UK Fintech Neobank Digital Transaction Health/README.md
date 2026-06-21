@@ -27,7 +27,7 @@ Analytical dashboard for Zephyr Bank's H1 2026 transaction health review, coveri
 
 ## 📂 Repository Structure
 - [Challenge](CHALLENGE_BRIEF.md)
-- [Link Challenge](https://datadna.onyxdata.co.uk/challenges/june-2026-datadna-uk-fintech-neobank-digital-transaction-health-monitor-analytics-challenge/))
+- [Link Challenge](https://datadna.onyxdata.co.uk/challenges/june-2026-datadna-uk-fintech-neobank-digital-transaction-health-monitor-analytics-challenge/)
 
 ## 🔄 Workflow
 
